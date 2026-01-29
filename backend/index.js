@@ -3,7 +3,7 @@ connectToMongo();
 
 const express = require("express");
 const app = express(); 
-
+const port = 5000;
 app.use(express.json()); //Enable JSON body parsing for all incoming requests // To Use Middleware
 
 // app.get('/api/v1/login', (req, res)=>{
@@ -16,7 +16,7 @@ app.use(express.json()); //Enable JSON body parsing for all incoming requests //
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/notes', require('./routes/notes'));
 
-app.listen(5000, () => {
-    console.log("Server running on port 5000");
+app.listen(port, () => {
+    console.log("Server running on port"+port);
 });
   

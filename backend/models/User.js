@@ -20,4 +20,8 @@ const UserSchema = new Schema({
     }
   });
 
-  module.exports = mongoose.model('User', UserSchema); // To create a new Model "user" with schema named "userSchema"
+  const User = mongoose.model('User', UserSchema); // To create a new Model "user" with schema named "userSchema"
+  //User.createIndexes(); // Avoid creating index
+  module.exports = User;
+
+

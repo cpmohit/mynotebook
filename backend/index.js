@@ -16,6 +16,7 @@ app.use(express.json()); //Enable JSON body parsing for all incoming requests //
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/notes', require('./routes/notes'));
 
+
 app.listen(port, () => {
     console.log("Server running on port"+port);
 });

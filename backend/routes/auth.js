@@ -57,7 +57,7 @@ router.post(
         },
       };
       // TO generate JWT Token
-      const JwtData = jwt.sign(data, JWT_SECRET_KEY); // already a ascn method
+      const JwtData = jwt.sign(data, JWT_SECRET_KEY); // already a async method
 
       res.status(200).json({ authToken: JwtData });
 
